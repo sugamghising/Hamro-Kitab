@@ -1,5 +1,5 @@
 *{
-   background-color: #e6e6e4 ;
+   /* background-color: #e6e6e4 ; */
    padding:0;
    color:#8A2851;
    box-sizing: border-box;
@@ -25,6 +25,8 @@
    display: flex;
    justify-content: right;
    align-items: center;
+   position: relative;
+	z-index: 999;
 }
 
 /* 
@@ -65,4 +67,55 @@
    margin: 10px;
    border: 2px solid #8A2851;
    border-radius: 5px;
+}
+
+.navbar ul ul {
+   position: absolute;
+   top: 100%;
+   display: none;
+   background-color: #cfcfcd;
+}
+
+.navbar ul ul li {
+   display: block;
+   border: 1px solid #e6e6e4;
+}
+
+.navbar li:hover ul {
+   display: block;
+}
+
+/* Change the background color of dropdown links on hover */
+.navbar ul ul li a:hover {
+   background-color: #555;
+}
+
+
+#loginFormContainer{
+   /* display: none; */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s;
+   
+}
+
+#loginFormContainer.visible {
+   visibility: visible;
+   opacity: 1;
+ }
+
+#loginButton{
+   cursor: pointer;
+}
+
+.hidden{
+   display: none;
 }
