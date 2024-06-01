@@ -1,15 +1,12 @@
-document.addEventListener('DOMContentLoaded', () => {
-   const loginButton = document.getElementById('LoginButton');
-   const loginFormContainer = document.getElementById('loginFormContainer');
-   const closeButton = document.getElementById('closeButton');
+const loginButton = document.getElementById('logInButton');
+const loginFormContainer = document.getElementById('loginFormContainer');
 
-   loginButton.addEventListener('click', () => {
-      loginFormContainer.classList.add('visible');
-   });
-
-   closeButton.addEventListener('click', () => {
-      loginFormContainer.classList.remove('visible');
-   });
-
-   console.log('print');
+loginButton.addEventListener('click', () =>{
+   if(loginFormContainer.style.visibility == 'hidden'){
+      loginFormContainer.style.visibility = 'visible';
+   }else{
+      loginFormContainer.style.visibility = 'hidden';
+   }
 });
+
+   
